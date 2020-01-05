@@ -7,7 +7,11 @@ GET     /                           controllers.HomeController.index
 
 GET     /show/:id                   controllers.HomeController.show(id: Int)
 
-POST    /create                        controllers.HomeController.create
+POST    /create                     controllers.HomeController.create
+
+PUT     /update/:id                 controllers.HomeController.update(id: Int)
+
+POST    /post/message               controllers.HomeController.createMessage
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

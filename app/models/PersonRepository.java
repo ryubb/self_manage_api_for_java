@@ -29,4 +29,8 @@ public class PersonRepository {
     person.save();
   }
 
+  public void update(PersonEntity person) {
+      person.update();
+  }
+
 }

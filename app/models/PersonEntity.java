@@ -2,6 +2,8 @@ package models;
 
 import io.ebean.*;
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "people")
@@ -14,6 +16,9 @@ public class PersonEntity extends Model {
   private String name;
   private String mail;
   private String tel;
+
+  @OneToMany(mappedBy = "person")
+  public List<MessageEntity> messages = new ArrayList<MessageEntity>();
 
   public PersonEntity() {
     super();
