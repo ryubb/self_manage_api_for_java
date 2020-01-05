@@ -1,0 +1,11 @@
+@(msg: String, data: List[PersonEntity])
+
+@main("Welcome to Play") {
+  <h1>Welcome to Play!</h1>
+  <p>@msg</p>
+  <ul>
+  @for(item <- data) {
+    <li>@item</li>
+  }
+  </ul>
+}
